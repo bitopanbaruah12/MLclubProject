@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-3.css">
+</head>
+<body>
+     <div class="container">
+            <span>Enter Your Details To Register</span>
+            <input type="text" name="" id="email" placeholder="Enter Your Email"> 
+            <input type="text" name="" id="name" placeholder="User Name"> 
+            <input type="text" name="" id="password" placeholder="Password">
+            <input type="text" name="" id="confirm" placeholder="Confirm Password">
+            <div onclick="register()">Register</div> 
+        </div>
+        <script>
+            function register(){
+                const email = document.getElementById('email').value.trim()
+                const name = document.getElementById('name').value.trim()
+                const password = document.getElementById('password').value
+                const confirm = document.getElementById('confirm').value
+
+
+                if (email===''|| name===''||password===''||confirm==='') {
+                    alert("enter details")
+                    
+                }
+
+            }
+        </script>
+</body>
+</html>

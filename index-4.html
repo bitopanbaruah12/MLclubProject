@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div id="togglebtn">
+        <img src="icons8-menu-32.png" alt="">
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <!-- <div class="togglebtn">
+            <img src="icons8-menu-32.png" alt="">
+        </div> -->
+
+        <ul id="sidebarapp">
+            <li>
+                <img src="home_13317809(1).png" alt=""width="32px" height="32px" style="padding: 0px 0 20px 0;"> Home</li>
+            <li>
+                <img src="user_2550260.png" alt="" width="32px" height="32px" style="padding: 0px 0 0 0;"> Account</li>
+            <li>
+                <img src="people_15131817.png" alt="" width="32px" height="32px" style="padding: 0px 0 0 0;"> Create Event</li>
+            <li>
+                <img src="attendance.png" alt="" width="32px" height="32px" style="padding: 0px 0 0 0;"> Manage Attendence</li>
+            <li>
+                <img src="logout_251376.png" alt="" width="32px" height="32px" style="padding: 0px 0 0 0;"> Log Out</li>
+        </ul>
+    </div>
+
+    <nav>
+        <ul>
+
+            <li>Home</li>
+            <li>Account</li>
+            <li>Create Event</li>
+            <li>Manage Attendence</li>
+            <li>Log Out</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="box">
+            <span>Make Presence , </span>
+            <span>Make Progress.</span>
+            <span>Because Everyday Matters,</span>
+            <span>Submit Your Attendence Now.</span>
+            <!-- <span class="res">Register</span> -->
+        </div>
+
+        <div class="container">
+            <span>Enter Your Information To Create Event</span>
+            <input type="text" placeholder="Enter Your Name" id="name">
+            <input type="text" placeholder="Enter Email" id="email">
+            <input type="text" placeholder="Enter Password" id="password">
+            <input type="text" placeholder="Create Event ID" id="password">
+            <span onclick="login()" id="login">Submit</span>
+        </div>
+    </main>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const button = document.getElementById('togglebtn');
+
+
+        let isOpen = false;
+
+
+
+        button.addEventListener('click', () => {
+            if (!isOpen) {
+                sidebar.style.left = '0px';
+
+                isOpen = true;
+            } else {
+                sidebar.style.left = '-250px';
+                isOpen = false;
+            }
+        });
+        document.addEventListener('click', () => {
+            if (isOpen && !sidebar.contains(event.target) && !button.contains(event.target)) {
+                sidebar.style.left = '-250px';
+                isOpen = false;
+            }
+        })
+
+    </script>
+
+</body>
+
+
+</html>

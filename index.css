@@ -1,0 +1,309 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* outline: 2px solid black; */
+}
+
+body {
+    background: linear-gradient(to right, #3686ff, #c3fcff);
+    height: 120vh;
+}
+
+nav {
+    background-color: rgb(145, 192, 255);
+    /* border: 1px solid black; c */
+    box-shadow: 0 6px 10px rgba(8, 30, 56, 0.5);
+    position: sticky;
+    top: 0;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px 30px 40px 0;
+    gap: 50px;
+}
+
+img {
+    display: none;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    font-weight: 500;
+    color: black;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li:hover {
+    list-style: none;
+    color: rgb(83, 83, 83);
+}
+
+.box {
+    /* background: linear-gradient(to right, #4facfe, #88f9ff); */
+    height: 50vh;
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    align-items: safe;
+    justify-content: center;
+    font-family: 'Neue Montreal', sans-serif;
+    z-index: -10000;
+}
+
+.box span {
+    margin-left: 10vw;
+}
+
+.box span:nth-child(1) {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.box span:nth-child(2) {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.box span:nth-child(3) {
+    padding: 25px 0 5px 0;
+    font-size: 20px;
+}
+
+.box span:nth-child(4) {
+    font-size: 20px;
+    padding: 0 0 20px 0;
+}
+
+.res {
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.res:hover {
+    background-color: rgb(214, 216, 218);
+    color: black;
+    /* font-size: 20px; */
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 40vh;
+    font-size: 20px;
+    font-family: 'Neue Montreal', sans-serif;
+
+}
+
+.container input {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 4px 0 4px 10px;
+    min-width: 15vw;
+    min-height: 3vh;
+    border-radius: 4px;
+    border: 1px solid rgb(58, 57, 57);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Neue Montreal', sans-serif;
+    opacity: 0.8;
+}
+
+.container input::placeholder {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Neue Montreal', sans-serif;
+
+}
+
+.container span:nth-child(1) {
+    padding: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Neue Montreal', sans-serif;
+}
+
+#login {
+    background-color: black;
+    color: white;
+    padding: 8px 13px 8px 13px;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+#login:hover {
+    background-color: rgb(216, 209, 209);
+    color: black;
+}
+
+.sidebar {
+    display: none;
+}
+
+@media only screen and (max-width: 1080px) {
+    body {
+        max-height: 100vh;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #sidebar li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    img {
+        display: block;
+    }
+
+    li {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+    }
+
+    #togglebtn img {
+        display: block;
+        padding: 10px;
+        /* z-index: 1001; */
+
+    }
+
+    #togglebtn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1001;
+        /* Higher than sidebar */
+        cursor: pointer;
+    }
+
+
+    .box {
+        align-items: center;
+    }
+
+    .box span:nth-child(1) {
+        font-size: 45px;
+    }
+
+    .box span:nth-child(2) {
+        font-size: 40px;
+    }
+
+    .box span:nth-child(3) {
+        font-size: 20px;
+    }
+
+    .box span:nth-child(4) {
+        font-size: 20px;
+    }
+
+    .box span {
+        margin-left: 0vw;
+    }
+
+    .res {
+        font-size: 15px;
+        /* max-width: 12vh; */
+    }
+
+    .res:hover {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+
+    .container input::placeholder {
+        font-size: 13px;
+
+    }
+
+    .container span:nth-child(1) {
+
+        font-size: 15px;
+
+    }
+
+    #login {
+        font-size: 15px;
+
+    }
+
+    #login:hover {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+
+    .sidebar {
+
+        position: absolute;
+        top: 0px;
+        display: block;
+        background-color: #ffffff;
+        max-width: auto;
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+        min-height: 100%;
+        z-index: 1;
+
+    }
+
+    .sidebar ul {
+
+        padding: 80px 0px 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .sidebar ul li {
+        list-style-type: none;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: 'Neue Montreal', sans-serif;
+
+    }
+
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    /* Hidden by default */
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(to right, #9dc4ff, #67a8fd);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1;
+}
